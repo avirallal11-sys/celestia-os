@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF0A0A1A">
+
+    <!-- Nebula/Cosmic Background -->
+    <View
+        android:id="@+id/nebula_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/nebula_background" />
+
+    <!-- Clock Widget -->
+    <LinearLayout
+        android:id="@+id/clock_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="60dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#FFFFFFFF"
+            android:textSize="72sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-thin"
+            android:letterSpacing="0.05" />
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saturday, August 29"
+            android:textColor="#B3FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/clock_widget"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/search_bar_bg"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_search"
+            android:alpha="0.6" />
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:background="@null"
+            android:hint="Search apps..."
+            android:textColorHint="#60FFFFFF"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:importantForAutofill="no" />
+    </LinearLayout>
+
+    <!-- App Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/app_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/dock_bar"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp"
+        android:clipToPadding="false" />
+
+    <!-- Dock -->
+    <LinearLayout
+        android:id="@+id/dock_bar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#40000020"
+        android:paddingHorizontal="24dp" />
+
+</RelativeLayout>
