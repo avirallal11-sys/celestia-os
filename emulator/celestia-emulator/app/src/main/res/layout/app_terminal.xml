@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D1117"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/terminal_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←"
+            android:textColor="#00D4FF"
+            android:textSize="20sp"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Terminal"
+            android:textColor="#00FF00"
+            android:textSize="16sp"
+            android:fontFamily="monospace"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Terminal Output -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/terminal_output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#00FF00"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="4dp" />
+    </ScrollView>
+
+    <!-- Input -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/terminal_input"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/terminal_input_bg"
+            android:textColor="#00FF00"
+            android:textColorHint="#6600FF00"
+            android:hint="Type command..."
+            android:fontFamily="monospace"
+            android:textSize="14sp"
+            android:paddingHorizontal="12dp"
+            android:singleLine="true"
+            android:imeOptions="actionSend"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:id="@+id/terminal_send"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:text="▶"
+            android:textColor="#00FF00"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/circle_btn" />
+    </LinearLayout>
+</LinearLayout>

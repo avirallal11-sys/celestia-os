@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0A1A">
+
+    <!-- Camera Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="#CC0A0A1A">
+
+        <TextView
+            android:id="@+id/camera_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←"
+            android:textColor="#00D4FF"
+            android:textSize="20sp"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Celestia Camera"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Preview -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/camera_preview_bg">
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/focus_ring" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PHOTO"
+                android:textColor="#00D4FF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚡"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Grid lines -->
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_gravity="center_vertical" android:background="#22FFFFFF" />
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_gravity="center_vertical" android:layout_marginTop="80dp" android:background="#22FFFFFF" />
+        <View android:layout_width="1dp" android:layout_height="match_parent" android:layout_gravity="center_horizontal" android:background="#22FFFFFF" />
+        <View android:layout_width="1dp" android:layout_height="match_parent" android:layout_gravity="center_horizontal" android:layout_marginStart="80dp" android:background="#22FFFFFF" />
+    </FrameLayout>
+
+    <!-- Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#E6000000"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="↻"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:background="@drawable/circle_btn" />
+
+        <View
+            android:id="@+id/capture_btn"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginHorizontal="40dp"
+            android:background="@drawable/capture_btn" />
+
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="⚙"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:background="@drawable/circle_btn" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="celestia_bg">#0A0A1A</color>
+    <color name="celestia_surface">#1A1A3E</color>
+    <color name="celestia_accent">#00D4FF</color>
+    <color name="celestia_accent_dark">#0088AA</color>
+    <color name="celestia_text">#FFFFFF</color>
+    <color name="celestia_text_dim">#B3FFFFFF</color>
+    <color name="celestia_text_darker">#66FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>

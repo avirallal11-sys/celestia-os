@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Background glow -->
+    <path
+        android:fillColor="#2200D4FF"
+        android:pathData="M60,60m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0" />
+    <!-- Outer ring -->
+    <path
+        android:fillColor="#4400D4FF"
+        android:pathData="M60,60m-35,0a35,35 0,1 1,70 0a35,35 0,1 1,-70 0" />
+    <!-- Star shape -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,20L68,44L94,44L73,60L80,84L60,68L40,84L47,60L26,44L52,44L60,20z" />
+    <!-- Center glow -->
+    <path
+        android:fillColor="#00D4FF"
+        android:pathData="M60,60m-12,0a12,12 0,1 1,24 0a12,12 0,1 1,-24 0" />
+    <!-- Core -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,60m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0" />
+</vector>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A1A">
+
+    <!-- Lock Screen -->
+    <LinearLayout
+        android:id="@+id/lock_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#CC0A0A1A"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/lock_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#FFFFFF"
+            android:textSize="80sp"
+            android:fontFamily="sans-serif-thin" />
+
+        <TextView
+            android:id="@+id/lock_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saturday, August 29"
+            android:textColor="#B3FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="80dp">
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:background="#00D4FF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap to unlock"
+                android:textColor="#66FFFFFF"
+                android:textSize="12sp"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Home Screen -->
+    <LinearLayout
+        android:id="@+id/home_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#0A0A1A"
+        android:visibility="gone">
+
+        <!-- Status Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/status_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="00:00"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="6dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📶" android:textSize="10sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔋" android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Clock Widget -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="40dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/home_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#FFFFFF"
+                android:textSize="64sp"
+                android:fontFamily="sans-serif-thin" />
+
+            <TextView
+                android:id="@+id/home_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saturday, August 29"
+                android:textColor="#B3FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginHorizontal="24dp"
+            android:background="@drawable/search_bg"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔍"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search apps..."
+                android:textColor="#66FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- App Grid -->
+        <GridLayout
+            android:id="@+id/app_grid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:columnCount="4"
+            android:padding="16dp"
+            android:useDefaultMargins="true" />
+
+        <!-- Dock -->
+        <LinearLayout
+            android:id="@+id/dock_bar"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#33000000"
+            android:paddingHorizontal="24dp" />
+
+        <!-- Home Indicator -->
+        <View
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:background="#66FFFFFF" />
+    </LinearLayout>
+
+    <!-- App Container -->
+    <ScrollView
+        android:id="@+id/app_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0A0A1A"
+        android:visibility="gone"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Notification Panel -->
+    <LinearLayout
+        android:id="@+id/notification_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F00A0A1A"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Quick Settings"
+                android:textColor="#00D4FF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙️"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- Quick Tiles -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:layout_marginTop="16dp"
+            android:useDefaultMargins="true">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:orientation="vertical" android:gravity="center" android:background="@drawable/qs_tile_bg" android:padding="16dp" android:layout_margin="4dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📶" android:textSize="24sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wi-Fi" android:textColor="#FFFFFF" android:textSize="11sp" android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:orientation="vertical" android:gravity="center" android:background="@drawable/qs_tile_active_bg" android:padding="16dp" android:layout_margin="4dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔵" android:textSize="24sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bluetooth" android:textColor="#FFFFFF" android:textSize="11sp" android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:orientation="vertical" android:gravity="center" android:background="@drawable/qs_tile_bg" android:padding="16dp" android:layout_margin="4dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📱" android:textSize="24sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data" android:textColor="#FFFFFF" android:textSize="11sp" android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </GridLayout>
+
+        <!-- Notifications -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notifications"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/notif_bg"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:layout_marginTop="8dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⭐" android:textSize="24sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Celestia OS" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="System ready. Welcome to Celestia!" android:textColor="#B3FFFFFF" android:textSize="12sp" />
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="now" android:textColor="#66FFFFFF" android:textSize="11sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

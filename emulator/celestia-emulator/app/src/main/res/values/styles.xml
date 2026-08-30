@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CelestiaEmulator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/celestia_accent</item>
+        <item name="colorPrimaryVariant">@color/celestia_accent_dark</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/celestia_accent</item>
+        <item name="android:colorBackground">@color/celestia_bg</item>
+        <item name="colorSurface">@color/celestia_surface</item>
+        <item name="colorOnSurface">@color/celestia_text</item>
+        <item name="android:windowBackground">@color/celestia_bg</item>
+        <item name="android:statusBarColor">@color/celestia_bg</item>
+        <item name="android:navigationBarColor">@color/celestia_bg</item>
+    </style>
+
+    <style name="Theme.CelestiaEmulator.Boot" parent="Theme.CelestiaEmulator">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

@@ -1,0 +1,212 @@
+/* Celestia OS - Animations */
+
+@keyframes nebulaPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes starPulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 0 30px var(--accent), 0 0 60px var(--accent), 0 0 100px var(--accent);
+    }
+    50% { 
+        transform: scale(1.2);
+        box-shadow: 0 0 40px var(--accent), 0 0 80px var(--accent), 0 0 120px var(--accent);
+    }
+}
+
+@keyframes ringExpand {
+    0% { 
+        transform: scale(0.5);
+        opacity: 0.8;
+    }
+    100% { 
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes textGlow {
+    0%, 100% { 
+        text-shadow: 0 0 20px var(--accent);
+    }
+    50% { 
+        text-shadow: 0 0 40px var(--accent), 0 0 60px var(--accent);
+    }
+}
+
+@keyframes bootProgress {
+    0% { width: 0%; }
+    20% { width: 25%; }
+    40% { width: 50%; }
+    60% { width: 70%; }
+    80% { width: 90%; }
+    100% { width: 100%; }
+}
+
+@keyframes swipeUp {
+    0%, 100% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-10px); opacity: 0.5; }
+}
+
+@keyframes focusPulse {
+    0%, 100% { 
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+    50% { 
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.4;
+    }
+}
+
+@keyframes slideInUp {
+    from { 
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to { 
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutDown {
+    from { 
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to { 
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes scaleIn {
+    from { 
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to { 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes ripple {
+    0% { 
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    100% { 
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Screen Transitions */
+.screen-enter {
+    animation: slideInUp 0.3s ease forwards;
+}
+
+.screen-exit {
+    animation: slideOutDown 0.3s ease forwards;
+}
+
+.fade-enter {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.fade-exit {
+    animation: fadeOut 0.3s ease forwards;
+}
+
+.scale-enter {
+    animation: scaleIn 0.3s ease forwards;
+}
+
+/* App Launch Animation */
+.app-launch {
+    animation: scaleIn 0.2s ease forwards;
+}
+
+/* Button Ripple Effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    animation: ripple 0.6s ease-out;
+    pointer-events: none;
+}
+
+/* Camera Flash */
+.camera-flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1000;
+    animation: flash 0.2s ease;
+    pointer-events: none;
+}
+
+/* Loading Spinner */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--bg-surface);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+}
+
+/* Shimmer Effect */
+.shimmer {
+    background: linear-gradient(
+        90deg,
+        var(--bg-surface) 25%,
+        var(--bg-secondary) 50%,
+        var(--bg-surface) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* Floating Animation */
+.floating {
+    animation: float 3s ease-in-out infinite;
+}

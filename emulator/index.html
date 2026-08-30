@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestia OS Emulator</title>
+    <link rel="stylesheet" href="core/engine.css">
+    <link rel="stylesheet" href="core/animations.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%230A0A1A'/><circle cx='50' cy='50' r='20' fill='%2300D4FF'/><circle cx='50' cy='50' r='8' fill='white'/></svg>">
+</head>
+<body>
+    <!-- Boot Screen -->
+    <div id="boot-screen" class="screen active">
+        <div class="boot-container">
+            <div class="nebula-bg"></div>
+            <div class="boot-star"></div>
+            <div class="boot-ring ring-1"></div>
+            <div class="boot-ring ring-2"></div>
+            <div class="boot-ring ring-3"></div>
+            <div class="boot-text">CELESTIA</div>
+            <div class="boot-version">1.0 Nebula</div>
+            <div class="boot-progress">
+                <div class="boot-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lock Screen -->
+    <div id="lock-screen" class="screen">
+        <div class="lock-container">
+            <div class="lock-time" id="lock-time">00:00</div>
+            <div class="lock-date" id="lock-date">Saturday, August 29</div>
+            <div class="lock-swipe">
+                <div class="lock-swipe-indicator"></div>
+                <span>Swipe up to unlock</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Screen (Launcher) -->
+    <div id="home-screen" class="screen">
+        <div class="home-container">
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <div class="status-left">
+                    <span class="status-time" id="status-time">00:00</span>
+                </div>
+                <div class="status-right">
+                    <span class="status-icon">&#9679;</span>
+                    <span class="status-icon">&#9679;&#9679;</span>
+                    <span class="status-icon">&#9679;&#9679;&#9679;</span>
+                    <span class="status-battery">100%</span>
+                </div>
+            </div>
+
+            <!-- Clock Widget -->
+            <div class="clock-widget">
+                <div class="clock-large" id="home-time">00:00</div>
+                <div class="clock-date" id="home-date">Saturday, August 29</div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar" onclick="openSearch()">
+                <span class="search-icon">&#128269;</span>
+                <span class="search-text">Search apps...</span>
+            </div>
+
+            <!-- App Grid -->
+            <div class="app-grid" id="app-grid">
+                <!-- Apps will be populated by JS -->
+            </div>
+
+            <!-- Dock -->
+            <div class="dock-bar" id="dock-bar">
+                <!-- Dock apps populated by JS -->
+            </div>
+
+            <!-- Home Indicator -->
+            <div class="home-indicator"></div>
+        </div>
+    </div>
+
+    <!-- App Container -->
+    <div id="app-container" class="screen">
+        <div class="app-header">
+            <button class="app-back" onclick="closeApp()">&#8592;</button>
+            <span class="app-title" id="app-title">App</span>
+        </div>
+        <div class="app-content" id="app-content">
+            <!-- App content loads here -->
+        </div>
+    </div>
+
+    <!-- Settings App -->
+    <div id="settings-screen" class="screen">
+        <div class="settings-container">
+            <div class="settings-header">
+                <h1>Settings</h1>
+                <p>Celestia 1.0</p>
+                <div class="settings-search">
+                    <span>&#128269;</span>
+                    <input type="text" placeholder="Search settings...">
+                </div>
+            </div>
+            <div class="settings-list" id="settings-list">
+                <!-- Settings items populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Camera App -->
+    <div id="camera-screen" class="screen">
+        <div class="camera-container">
+            <div class="camera-preview">
+                <div class="camera-noise"></div>
+                <div class="camera-focus-ring"></div>
+                <div class="camera-grid">
+                    <div class="grid-line grid-h1"></div>
+                    <div class="grid-line grid-h2"></div>
+                    <div class="grid-line grid-v1"></div>
+                    <div class="grid-line grid-v2"></div>
+                </div>
+            </div>
+            <div class="camera-top-bar">
+                <span class="camera-mode">PHOTO</span>
+                <span class="camera-flash">&#9889;</span>
+            </div>
+            <div class="camera-controls">
+                <button class="camera-btn-secondary">&#8635;</button>
+                <button class="camera-btn-capture" id="capture-btn">
+                    <div class="capture-inner"></div>
+                </button>
+                <button class="camera-btn-secondary">&#9881;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Panel -->
+    <div id="notification-panel" class="panel">
+        <div class="panel-header">
+            <span id="panel-time">00:00</span>
+            <span class="panel-settings" onclick="openSettings()">&#9881;</span>
+        </div>
+        <div class="quick-settings">
+            <div class="qs-tile active" onclick="this.classList.toggle('active')">
+                <span>&#128246;</span>
+                <small>Wi-Fi</small>
+            </div>
+            <div class="qs-tile" onclick="this.classList.toggle('active')">
+                <span>&#128267;</span>
+                <small>Bluetooth</small>
+            </div>
+            <div class="qs-tile active" onclick="this.classList.toggle('active')">
+                <span>&#128225;</span>
+                <small>Data</small>
+            </div>
+            <div class="qs-tile" onclick="this.classList.toggle('active')">
+                <span>&#9681;</span>
+                <small>Auto-rotate</small>
+            </div>
+            <div class="qs-tile" onclick="this.classList.toggle('active')">
+                <span>&#9790;</span>
+                <small>Do not disturb</small>
+            </div>
+            <div class="qs-tile active" onclick="this.classList.toggle('active')">
+                <span>&#9889;</span>
+                <small>Battery saver</small>
+            </div>
+        </div>
+        <div class="brightness-slider">
+            <span>&#9728;</span>
+            <input type="range" min="0" max="100" value="80">
+            <span>&#9728;</span>
+        </div>
+        <div class="notifications">
+            <div class="notification">
+                <div class="notif-icon">&#128247;</div>
+                <div class="notif-content">
+                    <strong>Celestia Camera</strong>
+                    <p>New photo saved</p>
+                </div>
+                <span class="notif-time">2m ago</span>
+            </div>
+            <div class="notification">
+                <div class="notif-icon">&#9881;</div>
+                <div class="notif-content">
+                    <strong>Celestia Settings</strong>
+                    <p>System update available</p>
+                </div>
+                <span class="notif-time">1h ago</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- GitHub Sync Modal -->
+    <div id="github-modal" class="modal">
+        <div class="modal-content">
+            <h2>&#128260; Sync with GitHub</h2>
+            <p>Pull latest Celestia OS updates</p>
+            <input type="text" id="repo-url" placeholder="https://github.com/user/celestia-os" value="https://github.com/user/celestia-os">
+            <div class="modal-buttons">
+                <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn-primary" onclick="syncRepo()">Pull & Update</button>
+            </div>
+            <div id="sync-status" class="sync-status"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="core/engine.js"></script>
+    <script src="core/apps.js"></script>
+    <script src="core/launcher.js"></script>
+    <script src="engine/celestia-engine.js"></script>
+</body>
+</html>
