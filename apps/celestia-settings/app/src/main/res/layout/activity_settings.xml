@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_title"
+        android:textColor="@color/text_primary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/searchBar"
+        style="@style/SearchBar"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:drawableTint="@color/text_hint"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="4dp">
+
+            <!-- Network & Internet -->
+            <LinearLayout
+                android:id="@+id/item_network"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_wifi"
+                    android:contentDescription="Network"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_network"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_network_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Bluetooth -->
+            <LinearLayout
+                android:id="@+id/item_bluetooth"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_bluetooth"
+                    android:contentDescription="Bluetooth"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_bluetooth"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_bluetooth_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Display -->
+            <LinearLayout
+                android:id="@+id/item_display"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_display"
+                    android:contentDescription="Display"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_display"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_display_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Sound & Vibration -->
+            <LinearLayout
+                android:id="@+id/item_sound"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_sound"
+                    android:contentDescription="Sound"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_sound"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_sound_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Battery -->
+            <LinearLayout
+                android:id="@+id/item_battery"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_battery"
+                    android:contentDescription="Battery"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_battery"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_battery_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Storage -->
+            <LinearLayout
+                android:id="@+id/item_storage"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_storage"
+                    android:contentDescription="Storage"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_storage"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_storage_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Privacy -->
+            <LinearLayout
+                android:id="@+id/item_privacy"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_privacy"
+                    android:contentDescription="Privacy"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_privacy"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_privacy_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Location -->
+            <LinearLayout
+                android:id="@+id/item_location"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_location"
+                    android:contentDescription="Location"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_location"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_location_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Security -->
+            <LinearLayout
+                android:id="@+id/item_security"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_security"
+                    android:contentDescription="Security"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_security"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_security_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Accounts -->
+            <LinearLayout
+                android:id="@+id/item_accounts"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_accounts"
+                    android:contentDescription="Accounts"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_accounts"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_accounts_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Accessibility -->
+            <LinearLayout
+                android:id="@+id/item_accessibility"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_accessibility"
+                    android:contentDescription="Accessibility"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_accessibility"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_accessibility_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- System -->
+            <LinearLayout
+                android:id="@+id/item_system"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_system"
+                    android:contentDescription="System"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_system"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_system_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Developer Options -->
+            <LinearLayout
+                android:id="@+id/item_developer"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_dev"
+                    android:contentDescription="Developer"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_developer"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_developer_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- About Celestia -->
+            <LinearLayout
+                android:id="@+id/item_about"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_info"
+                    android:contentDescription="About"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_about"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_about_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Celestia Settings -->
+            <LinearLayout
+                android:id="@+id/item_celestia"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_celestia"
+                    android:contentDescription="Celestia"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/cat_celestia"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/cat_celestia_sub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

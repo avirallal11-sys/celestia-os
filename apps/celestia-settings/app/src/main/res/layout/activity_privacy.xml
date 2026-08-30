@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/SettingsHeader"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btnBack"
+            style="@style/BackButton"
+            android:src="@drawable/ic_chevron"
+            android:rotation="180"
+            android:contentDescription="Back"/>
+        <TextView style="@style/HeaderTitle"
+            android:text="@string/privacy_title"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- Permission Manager -->
+            <LinearLayout
+                android:id="@+id/permissionManagerItem"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_privacy"
+                    android:contentDescription="Permissions"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/privacy_permission_manager"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <TextView
+                style="@style/SectionHeader"
+                android:text="App permissions"/>
+
+            <!-- Camera -->
+            <LinearLayout
+                style="@style/SettingsItemCompact"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_info"
+                    android:contentDescription="Camera"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/permission_camera"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="3 apps"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Location -->
+            <LinearLayout
+                style="@style/SettingsItemCompact"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_location"
+                    android:contentDescription="Location"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/permission_location"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="5 apps"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Microphone -->
+            <LinearLayout
+                style="@style/SettingsItemCompact"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_sound"
+                    android:contentDescription="Microphone"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/permission_microphone"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="2 apps"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Contacts -->
+            <LinearLayout
+                style="@style/SettingsItemCompact"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_accounts"
+                    android:contentDescription="Contacts"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/permission_contacts"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="4 apps"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Phone -->
+            <LinearLayout
+                style="@style/SettingsItemCompact"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_info"
+                    android:contentDescription="Phone"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/permission_phone"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="1 app"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- SMS -->
+            <LinearLayout
+                style="@style/SettingsItemCompact"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_info"
+                    android:contentDescription="SMS"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/permission_sms"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/no_apps"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Activity Controls -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/privacy_activity_controls"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/activityControlsSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Delete Activity -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/privacy_delete_activity"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/deleteActivitySwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Ads Privacy -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/privacy_ads"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

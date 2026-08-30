@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/SettingsHeader"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btnBack"
+            style="@style/BackButton"
+            android:src="@drawable/ic_chevron"
+            android:rotation="180"
+            android:contentDescription="Back"/>
+        <TextView style="@style/HeaderTitle"
+            android:text="@string/security_title"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- Screen Lock -->
+            <LinearLayout
+                android:id="@+id/screenLockItem"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_security"
+                    android:contentDescription="Lock"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/security_screen_lock"/>
+                    <TextView
+                        android:id="@+id/screenLockValue"
+                        style="@style/ItemSubtitle"
+                        android:text="@string/lock_pattern"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Fingerprint -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/security_fingerprint"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/fingerprintSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Face Recognition -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/security_face"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/faceSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Find My Device -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/security_find_device"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/enabled"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/findDeviceSwitch"
+                    style="@style/SwitchStyle"
+                    android:checked="true"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Security Update -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_info"
+                    android:contentDescription="Update"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/security_update"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="Android security update: August 1, 2026"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Encryption -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_security"
+                    android:contentDescription="Encryption"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/security_encryption"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/encryption_status"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

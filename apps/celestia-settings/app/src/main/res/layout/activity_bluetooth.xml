@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/SettingsHeader"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btnBack"
+            style="@style/BackButton"
+            android:src="@drawable/ic_chevron"
+            android:rotation="180"
+            android:contentDescription="Back"/>
+        <TextView style="@style/HeaderTitle"
+            android:text="@string/bluetooth_title"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- BT Toggle -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/bluetooth_toggle"/>
+                    <TextView
+                        android:id="@+id/btStatusText"
+                        style="@style/ItemSubtitle"
+                        android:text="@string/on"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/btSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Device Name -->
+            <LinearLayout
+                android:id="@+id/deviceNameItem"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/bluetooth_device_name"/>
+                    <TextView
+                        android:id="@+id/deviceNameText"
+                        style="@style/ItemSubtitle"
+                        android:text="Celestia 1.0"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <TextView
+                android:id="@+id/btOffMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bluetooth_off_message"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:padding="32dp"
+                android:visibility="gone"/>
+
+            <!-- Paired Devices -->
+            <TextView
+                android:id="@+id/pairedHeader"
+                style="@style/SectionHeader"
+                android:text="@string/bluetooth_paired"/>
+
+            <LinearLayout
+                android:id="@+id/pairedList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <!-- Available Devices -->
+            <TextView
+                android:id="@+id/availableHeader"
+                style="@style/SectionHeader"
+                android:text="@string/bluetooth_available"/>
+
+            <LinearLayout
+                android:id="@+id/availableList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Galaxy Buds -->
+                <LinearLayout
+                    android:id="@+id/bt_galaxy_buds"
+                    style="@style/SettingsItem"
+                    android:orientation="horizontal">
+                    <ImageView
+                        style="@style/ItemIcon"
+                        android:src="@drawable/ic_bluetooth"
+                        android:contentDescription="BT"/>
+                    <LinearLayout
+                        style="@style/ItemTitleVertical"
+                        android:orientation="vertical">
+                        <TextView style="@style/ItemTitle"
+                            android:text="Galaxy Buds"/>
+                        <TextView style="@style/ItemSubtitle"
+                            android:text="Headphone"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bluetooth_pair"
+                        android:textColor="@color/accent"
+                        android:textSize="14sp"
+                        android:padding="8dp"/>
+                </LinearLayout>
+
+                <View style="@style/DividerStyle"/>
+
+                <!-- Sony WH-1000XM5 -->
+                <LinearLayout
+                    android:id="@+id/bt_sony"
+                    style="@style/SettingsItem"
+                    android:orientation="horizontal">
+                    <ImageView
+                        style="@style/ItemIcon"
+                        android:src="@drawable/ic_bluetooth"
+                        android:contentDescription="BT"/>
+                    <LinearLayout
+                        style="@style/ItemTitleVertical"
+                        android:orientation="vertical">
+                        <TextView style="@style/ItemTitle"
+                            android:text="Sony WH-1000XM5"/>
+                        <TextView style="@style/ItemSubtitle"
+                            android:text="Headphone"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bluetooth_pair"
+                        android:textColor="@color/accent"
+                        android:textSize="14sp"
+                        android:padding="8dp"/>
+                </LinearLayout>
+
+                <View style="@style/DividerStyle"/>
+
+                <!-- Celestia Watch -->
+                <LinearLayout
+                    android:id="@+id/bt_watch"
+                    style="@style/SettingsItem"
+                    android:orientation="horizontal">
+                    <ImageView
+                        style="@style/ItemIcon"
+                        android:src="@drawable/ic_bluetooth"
+                        android:contentDescription="BT"/>
+                    <LinearLayout
+                        style="@style/ItemTitleVertical"
+                        android:orientation="vertical">
+                        <TextView style="@style/ItemTitle"
+                            android:text="Celestia Watch"/>
+                        <TextView style="@style/ItemSubtitle"
+                            android:text="Watch"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bluetooth_pair"
+                        android:textColor="@color/accent"
+                        android:textSize="14sp"
+                        android:padding="8dp"/>
+                </LinearLayout>
+
+                <View style="@style/DividerStyle"/>
+
+                <!-- Mi Band 7 -->
+                <LinearLayout
+                    android:id="@+id/bt_miband"
+                    style="@style/SettingsItem"
+                    android:orientation="horizontal">
+                    <ImageView
+                        style="@style/ItemIcon"
+                        android:src="@drawable/ic_bluetooth"
+                        android:contentDescription="BT"/>
+                    <LinearLayout
+                        style="@style/ItemTitleVertical"
+                        android:orientation="vertical">
+                        <TextView style="@style/ItemTitle"
+                            android:text="Mi Band 7"/>
+                        <TextView style="@style/ItemSubtitle"
+                            android:text="Fitness tracker"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bluetooth_pair"
+                        android:textColor="@color/accent"
+                        android:textSize="14sp"
+                        android:padding="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

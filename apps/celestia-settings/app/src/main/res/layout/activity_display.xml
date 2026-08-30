@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/SettingsHeader"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btnBack"
+            style="@style/BackButton"
+            android:src="@drawable/ic_chevron"
+            android:rotation="180"
+            android:contentDescription="Back"/>
+        <TextView style="@style/HeaderTitle"
+            android:text="@string/display_title"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- Brightness -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/display_brightness"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_display"
+                        android:contentDescription="Dim"
+                        android:layout_marginRight="8dp"/>
+                    <SeekBar
+                        android:id="@+id/brightnessSeekBar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:max="100"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/brightness_slider"
+                        android:thumbTint="@color/accent"/>
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_display"
+                        android:contentDescription="Bright"
+                        android:layout_marginLeft="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Dark Mode -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/display_dark_mode"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/darkModeSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Font Size -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/display_font_size"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="4dp"/>
+                <TextView
+                    android:id="@+id/fontSizeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/font_default"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="8dp"/>
+                <SeekBar
+                    android:id="@+id/fontSizeSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="3"
+                    android:progress="1"
+                    android:progressDrawable="@drawable/brightness_slider"
+                    android:thumbTint="@color/accent"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Screen Timeout -->
+            <LinearLayout
+                android:id="@+id/screenTimeoutItem"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/display_screen_timeout"/>
+                    <TextView
+                        android:id="@+id/timeoutValue"
+                        style="@style/ItemSubtitle"
+                        android:text="@string/timeout_30s"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Wallpaper -->
+            <LinearLayout
+                android:id="@+id/wallpaperItem"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/display_wallpaper"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Screen Zoom -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/display_zoom"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                <SeekBar
+                    android:id="@+id/zoomSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="4"
+                    android:progress="2"
+                    android:progressDrawable="@drawable/brightness_slider"
+                    android:thumbTint="@color/accent"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Eye Comfort Shield -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/display_eye_comfort"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/eyeComfortSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Auto-rotate -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/display_auto_rotate"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/autoRotateSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

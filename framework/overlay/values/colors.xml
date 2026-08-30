@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Celestia System UI Overlay - Status Bar Theme -->
+<resources>
+    <!-- Status Bar Colors -->
+    <color name="status_bar_background">#FF0A0A1A</color>
+    <color name="status_bar_clock">#FF00D4FF</color>
+    <color name="status_bar_icons">#FFFFFFFF</color>
+
+    <!-- Navigation Bar Colors -->
+    <color name="navigation_bar_background">#FF0A0A1A</color>
+    <color name="navigation_bar_icons">#FFFFFFFF</color>
+
+    <!-- Quick Settings Theme -->
+    <color name="qs_background">#FF0A0A1A</color>
+    <color name="qs_tile_active">#FF00D4FF</color>
+    <color name="qs_tile_inactive">#40FFFFFF</color>
+    <color name="qs_text_primary">#FFFFFFFF</color>
+    <color name="qs_text_secondary">#B3FFFFFF</color>
+
+    <!-- Notification Theme -->
+    <color name="notification_background">#FF1A1A3E</color>
+    <color name="notification_text_primary">#FFFFFFFF</color>
+    <color name="notification_text_secondary">#B3FFFFFF</color>
+    <color name="notification_accent">#FF00D4FF</color>
+
+    <!-- Dialog Theme -->
+    <color name="dialog_background">#FF1A1A3E</color>
+    <color name="dialog_text">#FFFFFFFF</color>
+    <color name="dialog_button">#FF00D4FF</color>
+
+    <!-- Accent Colors -->
+    <color name="celestia_accent">#FF00D4FF</color>
+    <color name="celestia_accent_dark">#FF0088AA</color>
+    <color name="celestia_primary">#FF1A1A3E</color>
+    <color name="celestia_background">#FF0A0A1A</color>
+    <color name="celestia_surface">#FF252545</color>
+</resources>

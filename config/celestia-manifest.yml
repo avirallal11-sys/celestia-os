@@ -1,0 +1,57 @@
+# Celestia 1.0 - App Manifest
+# Lists all custom components
+
+apps:
+  celestia-camera:
+    name: Celestia Camera
+    package: com.celestia.camera
+    version: 1.0
+    description: Custom camera app with cosmic UI
+    features:
+      - Photo capture
+      - Video recording
+      - Front/back camera switch
+      - Flash control
+      - Auto-focus
+
+  celestia-settings:
+    name: Celestia Settings
+    package: com.celestia.settings
+    version: 1.0
+    description: Custom settings app with dark theme
+    features:
+      - Network settings
+      - Display settings
+      - Sound settings
+      - Battery info
+      - Storage info
+      - Privacy settings
+      - Security settings
+      - System info
+      - Celestia custom settings
+
+  celestia-launcher:
+    name: Celestia Launcher
+    package: com.celestia.launcher
+    version: 1.0
+    description: Custom home screen with cosmic design
+    features:
+      - App grid
+      - Clock widget
+      - Search bar
+      - Dock bar
+      - Wallpaper picker
+
+boot-animation:
+  name: Rising Nebula
+  resolution: 480x480
+  fps: 30
+  frames: 60
+  description: Star/nebula forming animation
+
+theming:
+  primary-color: "#1A1A3E"
+  accent-color: "#00D4FF"
+  background-color: "#0A0A1A"
+  text-color: "#FFFFFF"
+  style: "Dark Cosmic"

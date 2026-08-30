@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/SettingsHeader"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btnBack"
+            style="@style/BackButton"
+            android:src="@drawable/ic_chevron"
+            android:rotation="180"
+            android:contentDescription="Back"/>
+        <TextView style="@style/HeaderTitle"
+            android:text="@string/accessibility_title"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- Font Size -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/accessibility_font_size"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/font_default"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Display Size -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/accessibility_display_size"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="Default"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Color Correction -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/accessibility_color_correction"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/colorCorrectionSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Color Inversion -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/accessibility_color_inversion"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/colorInversionSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- High Contrast Text -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/accessibility_high_contrast"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/highContrastSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Magnification -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/accessibility_magnification"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/magnificationSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- TalkBack -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/accessibility_talkback"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/talkbackSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Select to Speak -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/accessibility_select_to_speak"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/selectToSpeakSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Switch Access -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/accessibility_switch_access"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/switchAccessSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Hearing Aids -->
+            <LinearLayout
+                android:id="@+id/hearingAidsItem"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/accessibility_hearing"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

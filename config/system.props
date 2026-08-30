@@ -1,0 +1,35 @@
+# Celestia 1.0 - Default System Settings
+
+# Default to dark mode
+persist.sys.theme=dark
+
+# Celestia branding
+ro.celestia.version=1.0
+ro.celestia.codename=Nebula
+
+# Performance
+dalvik.vm.heapsize=512m
+dalvik.vm.heapgrowthlimit=256m
+
+# Display
+ro.sf.lcd_density=320
+ro.config.notification_sound=Argon.ogg
+ro.config.alarm_alert=Helium.ogg
+
+# Camera
+camera2.levels=Full
+camera2.portrait.force=true
+
+# Audio
+ro.config.ringtone=Andromeda.ogg
+ro.config.mediaplayer=Orion.ogg
+
+# Network
+persist.sys.dalvik.vm.lib.2=libart.so
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+
+# Input
+ro.config.keyboard=True
+ro.config.mouse=True
+ro.config.touchscreen=True

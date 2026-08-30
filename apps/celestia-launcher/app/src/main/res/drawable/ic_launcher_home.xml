@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Star/Home icon for launcher -->
+    <path
+        android:fillColor="#FF00D4FF"
+        android:pathData="M24,4L29.19,16.02L42,17.83L32.5,26.82L35.38,40L24,33.76L12.62,40L15.5,26.82L6,17.83L18.81,16.02L24,4z" />
+    <path
+        android:fillColor="#FF0A0A1A"
+        android:pathData="M24,10L21,18H14L19.5,23L17,31L24,26L31,31L28.5,23L34,18H27L24,10z" />
+</vector>

@@ -1,0 +1,21 @@
+# Celestia 1.0 - WSL Memory Configuration
+# Save this as: C:\Users\YourName\.wslconfig
+# Then restart WSL: wsl --shutdown
+
+[wsl2]
+# Allocate 6GB RAM to WSL (leaves 2GB for Windows)
+memory=6GB
+
+# Use 4 CPU cores
+processors=4
+
+# 4GB swap for overflow
+swap=4GB
+
+# Enable localhost forwarding
+localhostForwarding=true
+
+# Enable experimental features
+[experimental]
+autoMemoryReclaim=gradual
+sparseVhd=true

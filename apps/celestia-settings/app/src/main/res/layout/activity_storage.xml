@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/SettingsHeader"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btnBack"
+            style="@style/BackButton"
+            android:src="@drawable/ic_chevron"
+            android:rotation="180"
+            android:contentDescription="Back"/>
+        <TextView style="@style/HeaderTitle"
+            android:text="@string/storage_title"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingBottom="16dp">
+
+            <!-- Storage Visual -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingTop="24dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45.2 GB"
+                    android:textColor="@color/text_primary"
+                    android:textSize="36sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/storage_total"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- Storage Bar -->
+                <ProgressBar
+                    android:id="@+id/storageBar"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/storage_bar_height"
+                    android:layout_marginTop="16dp"
+                    android:max="128"
+                    android:progress="45"
+                    android:progressDrawable="@drawable/seekbar_bg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/storage_free"
+                    android:textColor="@color/accent"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <TextView
+                style="@style/SectionHeader"
+                android:text="Storage breakdown"/>
+
+            <!-- Apps -->
+            <LinearLayout
+                android:id="@+id/storage_apps"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@color/accent"
+                    android:layout_marginRight="16dp"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/storage_apps"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="18.3 GB"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- System -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@color/neon_purple"
+                    android:layout_marginRight="16dp"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/storage_system"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="12.1 GB"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Images -->
+            <LinearLayout
+                android:id="@+id/storage_images"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@color/safe_green"
+                    android:layout_marginRight="16dp"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/storage_images"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="5.2 GB"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Videos -->
+            <LinearLayout
+                android:id="@+id/storage_videos"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@color/color_r"
+                    android:layout_marginRight="16dp"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/storage_videos"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="3.8 GB"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Audio -->
+            <LinearLayout
+                android:id="@+id/storage_audio"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@color/color_y"
+                    android:layout_marginRight="16dp"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/storage_audio"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="2.1 GB"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Documents -->
+            <LinearLayout
+                android:id="@+id/storage_documents"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@color/color_c"
+                    android:layout_marginRight="16dp"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/storage_documents"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="1.5 GB"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Other -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@color/text_hint"
+                    android:layout_marginRight="16dp"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/storage_other"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="2.2 GB"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

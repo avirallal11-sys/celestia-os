@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Celestia System Theme Overlay -->
+<resources>
+    <!-- App Theme -->
+    <style name="Theme.Celestia" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/celestia_primary</item>
+        <item name="colorPrimaryVariant">@color/celestia_accent_dark</item>
+        <item name="colorOnPrimary">#FFFFFFFF</item>
+        <item name="colorSecondary">@color/celestia_accent</item>
+        <item name="colorSecondaryVariant">@color/celestia_accent_dark</item>
+        <item name="colorOnSecondary">#FF0A0A1A</item>
+        <item name="android:colorBackground">@color/celestia_background</item>
+        <item name="colorSurface">@color/celestia_surface</item>
+        <item name="colorOnSurface">#FFFFFFFF</item>
+        <item name="android:textColorPrimary">#FFFFFFFF</item>
+        <item name="android:textColorSecondary">#B3FFFFFF</item>
+        <item name="android:windowBackground">@color/celestia_background</item>
+        <item name="android:statusBarColor">@color/celestia_background</item>
+        <item name="android:navigationBarColor">@color/celestia_background</item>
+    </style>
+
+    <!-- Settings Theme -->
+    <style name="Theme.Celestia.Settings" parent="Theme.Celestia">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.Celestia</item>
+    </style>
+
+    <style name="PreferenceThemeOverlay.Celestia" parent="PreferenceThemeOverlay">
+        <item name="colorAccent">@color/celestia_accent</item>
+    </style>
+</resources>

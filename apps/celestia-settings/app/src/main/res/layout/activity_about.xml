@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/SettingsHeader"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btnBack"
+            style="@style/BackButton"
+            android:src="@drawable/ic_chevron"
+            android:rotation="180"
+            android:contentDescription="Back"/>
+        <TextView style="@style/HeaderTitle"
+            android:text="@string/about_title"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- Device Name -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/about_device_name"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/about_celestia_name"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Phone Number -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/about_phone_number"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/about_not_available"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Model -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/about_model"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/about_celestia_model"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Serial Number -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/about_serial"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/about_celestia_serial"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Android Version -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/about_android"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/about_celestia_android"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Baseband -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/about_baseband"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/about_celestia_baseband"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Kernel -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/about_kernel"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/about_celestia_kernel"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Build Number -->
+            <LinearLayout
+                android:id="@+id/buildNumberItem"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/about_build"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/about_celestia_build"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- SEAndroid -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/about_seandroid"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="@string/about_celestia_seandroid"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

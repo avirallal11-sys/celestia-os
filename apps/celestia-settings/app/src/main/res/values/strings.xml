@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celestia Settings</string>
+
+    <!-- Main Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="search_hint">Search settings</string>
+
+    <!-- Categories -->
+    <string name="cat_network">Network &amp; Internet</string>
+    <string name="cat_network_sub">Wi-Fi, mobile data, data usage</string>
+    <string name="cat_bluetooth">Bluetooth</string>
+    <string name="cat_bluetooth_sub">Pair devices, connection preferences</string>
+    <string name="cat_display">Display</string>
+    <string name="cat_display_sub">Brightness, wallpaper, theme</string>
+    <string name="cat_sound">Sound &amp; Vibration</string>
+    <string name="cat_sound_sub">Volume, ringtone, Do Not Disturb</string>
+    <string name="cat_battery">Battery</string>
+    <string name="cat_battery_sub">87% — about 8 hours left</string>
+    <string name="cat_storage">Storage</string>
+    <string name="cat_storage_sub">45.2 GB used of 128 GB</string>
+    <string name="cat_privacy">Privacy</string>
+    <string name="cat_privacy_sub">Permissions, activity controls</string>
+    <string name="cat_location">Location</string>
+    <string name="cat_location_sub">On — using GPS, Wi-Fi</string>
+    <string name="cat_security">Security</string>
+    <string name="cat_security_sub">Screen lock, fingerprint</string>
+    <string name="cat_accounts">Accounts</string>
+    <string name="cat_accounts_sub">Google, GitHub, sync</string>
+    <string name="cat_accessibility">Accessibility</string>
+    <string name="cat_accessibility_sub">Display, interaction, audio</string>
+    <string name="cat_system">System</string>
+    <string name="cat_system_sub">Language, date, backup, reset</string>
+    <string name="cat_developer">Developer Options</string>
+    <string name="cat_developer_sub">Debugging, development tools</string>
+    <string name="cat_about">About Celestia</string>
+    <string name="cat_about_sub">Device info, build number</string>
+    <string name="cat_celestia">Celestia Settings</string>
+    <string name="cat_celestia_sub">Theme, effects, cosmic settings</string>
+
+    <!-- WiFi -->
+    <string name="wifi_title">Wi-Fi</string>
+    <string name="wifi_toggle">Use Wi-Fi</string>
+    <string name="wifi_available">Available networks</string>
+    <string name="wifi_connected">Connected</string>
+    <string name="wifi_saved">Saved</string>
+    <string name="wifi_signal_excellent">Excellent signal</string>
+    <string name="wifi_signal_good">Good signal</string>
+    <string name="wifi_signal_fair">Fair signal</string>
+    <string name="wifi_signal_weak">Weak signal</string>
+    <string name="wifi_freq_24">2.4 GHz</string>
+    <string name="wifi_freq_5">5 GHz</string>
+    <string name="wifi_security_wpa2">WPA2-Personal</string>
+    <string name="wifi_security_wpa3">WPA3-Personal</string>
+    <string name="wifi_security_open">Open</string>
+    <string name="wifi_password_title">Enter password</string>
+    <string name="wifi_connect">Connect</string>
+    <string name="wifi_cancel">Cancel</string>
+    <string name="wifi_off_message">Turn on Wi-Fi to see available networks</string>
+
+    <!-- Bluetooth -->
+    <string name="bluetooth_title">Bluetooth</string>
+    <string name="bluetooth_toggle">Use Bluetooth</string>
+    <string name="bluetooth_available">Available devices</string>
+    <string name="bluetooth_paired">Paired devices</string>
+    <string name="bluetooth_pair">Pair</string>
+    <string name="bluetooth_unpair">Unpair</string>
+    <string name="bluetooth_device_name">Device name</string>
+    <string name="bluetooth_pairing_title">Bluetooth pairing request</string>
+    <string name="bluetooth_pairing_confirm">Pair</string>
+    <string name="bluetooth_off_message">Turn on Bluetooth to see available devices</string>
+
+    <!-- Display -->
+    <string name="display_title">Display</string>
+    <string name="display_brightness">Brightness</string>
+    <string name="display_dark_mode">Dark mode</string>
+    <string name="display_font_size">Font size</string>
+    <string name="display_screen_timeout">Screen timeout</string>
+    <string name="display_wallpaper">Wallpaper</string>
+    <string name="display_zoom">Screen zoom</string>
+    <string name="display_eye_comfort">Eye comfort shield</string>
+    <string name="display_auto_rotate">Auto-rotate</string>
+    <string name="font_small">Small</string>
+    <string name="font_default">Default</string>
+    <string name="font_large">Large</string>
+    <string name="font_xlarge">Extra large</string>
+    <string name="timeout_15s">15 seconds</string>
+    <string name="timeout_30s">30 seconds</string>
+    <string name="timeout_1m">1 minute</string>
+    <string name="timeout_2m">2 minutes</string>
+    <string name="timeout_5m">5 minutes</string>
+    <string name="timeout_10m">10 minutes</string>
+    <string name="timeout_never">Never</string>
+
+    <!-- Sound -->
+    <string name="sound_title">Sound &amp; Vibration</string>
+    <string name="volume_media">Media</string>
+    <string name="volume_ringtone">Ringtone</string>
+    <string name="volume_notifications">Notifications</string>
+    <string name="volume_alarm">Alarm</string>
+    <string name="volume_system">System</string>
+    <string name="sound_dnd">Do Not Disturb</string>
+    <string name="sound_ringtone">Phone ringtone</string>
+    <string name="sound_vibrate">Vibration</string>
+    <string name="sound_touch">Touch sounds</string>
+
+    <!-- Battery -->
+    <string name="battery_title">Battery</string>
+    <string name="battery_percent">87%</string>
+    <string name="battery_last_charge">Last full charge: 3 hours ago</string>
+    <string name="battery_estimated">Estimated time left: 8 hours</string>
+    <string name="battery_saving">Power saving mode</string>
+    <string name="battery_adaptive">Adaptive battery</string>
+    <string name="battery_temp">Temperature</string>
+    <string name="battery_voltage">Voltage</string>
+    <string name="battery_tech">Technology</string>
+    <string name="battery_usage">Battery usage</string>
+
+    <!-- Storage -->
+    <string name="storage_title">Storage</string>
+    <string name="storage_used">45.2 GB used</string>
+    <string name="storage_total">of 128 GB</string>
+    <string name="storage_free">82.8 GB free</string>
+    <string name="storage_apps">Apps</string>
+    <string name="storage_system">System</string>
+    <string name="storage_images">Images</string>
+    <string name="storage_videos">Videos</string>
+    <string name="storage_audio">Audio</string>
+    <string name="storage_documents">Documents</string>
+    <string name="storage_other">Other</string>
+
+    <!-- Privacy -->
+    <string name="privacy_title">Privacy</string>
+    <string name="privacy_permission_manager">Permission manager</string>
+    <string name="privacy_activity_controls">Activity controls</string>
+    <string name="privacy_delete_activity">Delete activity</string>
+    <string name="privacy_ads">Ads privacy</string>
+    <string name="permission_camera">Camera</string>
+    <string name="permission_location">Location</string>
+    <string name="permission_microphone">Microphone</string>
+    <string name="permission_contacts">Contacts</string>
+    <string name="permission_phone">Phone</string>
+    <string name="permission_sms">SMS</string>
+    <string name="apps_count">%d apps</string>
+    <string name="no_apps">No apps</string>
+
+    <!-- Location -->
+    <string name="location_title">Location</string>
+    <string name="location_toggle">Use location</string>
+    <string name="location_recent">Recent location requests</string>
+    <string name="location_app_permissions">App location permissions</string>
+    <string name="location_services">Location services</string>
+    <string name="location_gps">GPS</string>
+    <string name="location_wifi_scan">Wi-Fi scanning</string>
+    <string name="location_bt_scan">Bluetooth scanning</string>
+    <string name="location_accuracy">Google Location Accuracy</string>
+
+    <!-- Security -->
+    <string name="security_title">Security</string>
+    <string name="security_screen_lock">Screen lock</string>
+    <string name="security_fingerprint">Fingerprint</string>
+    <string name="security_face">Face recognition</string>
+    <string name="security_find_device">Find My Device</string>
+    <string name="security_update">Security update</string>
+    <string name="security_encryption">Encryption</string>
+    <string name="lock_none">None</string>
+    <string name="lock_swipe">Swipe</string>
+    <string name="lock_pattern">Pattern</string>
+    <string name="lock_pin">PIN</string>
+    <string name="lock_password">Password</string>
+    <string name="encryption_status">Encrypted</string>
+
+    <!-- Accounts -->
+    <string name="accounts_title">Accounts</string>
+    <string name="accounts_add">Add account</string>
+    <string name="accounts_auto_sync">Auto-sync data</string>
+
+    <!-- Accessibility -->
+    <string name="accessibility_title">Accessibility</string>
+    <string name="accessibility_font_size">Font size</string>
+    <string name="accessibility_display_size">Display size</string>
+    <string name="accessibility_color_correction">Color correction</string>
+    <string name="accessibility_color_inversion">Color inversion</string>
+    <string name="accessibility_high_contrast">High contrast text</string>
+    <string name="accessibility_magnification">Magnification</string>
+    <string name="accessibility_talkback">TalkBack</string>
+    <string name="accessibility_select_to_speak">Select to speak</string>
+    <string name="accessibility_switch_access">Switch Access</string>
+    <string name="accessibility_hearing">Hearing aids</string>
+
+    <!-- System -->
+    <string name="system_title">System</string>
+    <string name="system_language">Languages &amp; input</string>
+    <string name="system_datetime">Date &amp; time</string>
+    <string name="system_datetime_auto">Set date &amp; time automatically</string>
+    <string name="system_backup">Backup &amp; reset</string>
+    <string name="system_reset">Reset options</string>
+    <string name="system_developer">Developer options</string>
+    <string name="system_updates">System updates</string>
+    <string name="system_gestures">Gesture navigation</string>
+    <string name="system_one_hand">One-handed mode</string>
+    <string name="timezone">Timezone</string>
+
+    <!-- About -->
+    <string name="about_title">About Celestia</string>
+    <string name="about_device_name">Device name</string>
+    <string name="about_phone_number">Phone number</string>
+    <string name="about_model">Model</string>
+    <string name="about_serial">Serial number</string>
+    <string name="about_android">Android version</string>
+    <string name="about_baseband">Baseband version</string>
+    <string name="about_kernel">Kernel version</string>
+    <string name="about_build">Build number</string>
+    <string name="about_seandroid">SEAndroid status</string>
+    <string name="about_not_available">Not available</string>
+    <string name="about_celestia_name">Celestia 1.0</string>
+    <string name="about_celestia_model">Celestia Virtual</string>
+    <string name="about_celestia_serial">CLT-2026-0829</string>
+    <string name="about_celestia_android">11</string>
+    <string name="about_celestia_baseband">1.0-celestia</string>
+    <string name="about_celestia_kernel">5.15.0-celestia</string>
+    <string name="about_celestia_build">CELESTIA.1.0.0829</string>
+    <string name="about_celestia_seandroid">Enforcing</string>
+    <string name="developer_toast">You are now a developer!</string>
+
+    <!-- Celestia -->
+    <string name="celestia_title">Celestia Settings</string>
+    <string name="celestia_theme">Theme</string>
+    <string name="celestia_boot_anim">Boot animation</string>
+    <string name="celestia_particles">Cosmic particle effects</string>
+    <string name="celestia_accent">Accent color</string>
+    <string name="celestia_version">Celestia OS Version</string>
+    <string name="celestia_github">GitHub Sync</string>
+    <string name="celestia_updates">Check for updates</string>
+    <string name="theme_dark_cosmic">Dark Cosmic</string>
+    <string name="theme_midnight_blue">Midnight Blue</string>
+    <string name="theme_neon_purple">Neon Purple</string>
+    <string name="theme_starlight">Starlight White</string>
+
+    <!-- Common -->
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="connected">Connected</string>
+    <string name="not_connected">Not connected</string>
+    <string name="tap_to_connect">Tap to connect</string>
+    <string name="saved_network">Saved</string>
+</resources>

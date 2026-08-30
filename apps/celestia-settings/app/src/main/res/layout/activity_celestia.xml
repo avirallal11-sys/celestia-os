@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/SettingsHeader"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btnBack"
+            style="@style/BackButton"
+            android:src="@drawable/ic_chevron"
+            android:rotation="180"
+            android:contentDescription="Back"/>
+        <TextView style="@style/HeaderTitle"
+            android:text="@string/celestia_title"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- Theme Selector -->
+            <TextView
+                style="@style/SectionHeader"
+                android:text="Theme"/>
+
+            <LinearLayout
+                android:id="@+id/themeDarkCosmic"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/theme_dark_cosmic"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="Default dark theme"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/themeDarkCosmicCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✓"
+                    android:textColor="@color/accent"
+                    android:textSize="18sp"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <LinearLayout
+                android:id="@+id/themeMidnightBlue"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/theme_midnight_blue"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="Deep blue tones"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/themeMidnightBlueCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✓"
+                    android:textColor="@color/accent"
+                    android:textSize="18sp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <LinearLayout
+                android:id="@+id/themeNeonPurple"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/theme_neon_purple"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="Vibrant purple accents"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/themeNeonPurpleCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✓"
+                    android:textColor="@color/accent"
+                    android:textSize="18sp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <LinearLayout
+                android:id="@+id/themeStarlight"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/theme_starlight"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="Clean light theme"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/themeStarlightCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✓"
+                    android:textColor="@color/accent"
+                    android:textSize="18sp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Boot Animation -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/celestia_boot_anim"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/bootAnimSwitch"
+                    style="@style/SwitchStyle"
+                    android:checked="true"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Cosmic Particles -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/celestia_particles"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/particlesSwitch"
+                    style="@style/SwitchStyle"
+                    android:checked="true"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Auto Update -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="Auto-update"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="Check for updates automatically"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/autoUpdateSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Accent Color -->
+            <TextView
+                style="@style/SectionHeader"
+                android:text="@string/celestia_accent"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <View
+                    android:id="@+id/colorCyan"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="6dp"
+                    android:background="@color/accent"/>
+
+                <View
+                    android:id="@+id/colorRed"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="6dp"
+                    android:background="@color/color_r"/>
+
+                <View
+                    android:id="@+id/colorGreen"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="6dp"
+                    android:background="@color/color_g"/>
+
+                <View
+                    android:id="@+id/colorPurple"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="6dp"
+                    android:background="@color/neon_purple"/>
+
+                <View
+                    android:id="@+id/colorYellow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="6dp"
+                    android:background="@color/color_y"/>
+
+                <View
+                    android:id="@+id/colorBlue"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="6dp"
+                    android:background="@color/color_b"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Version Info -->
+            <TextView
+                style="@style/SectionHeader"
+                android:text="@string/celestia_version"/>
+
+            <LinearLayout
+                style="@style/SettingsItemCompact"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="Celestia OS"/>
+                    <TextView
+                        android:id="@+id/updateStatusText"
+                        style="@style/ItemSubtitle"
+                        android:text="Version 1.0.0 (Build 0829)"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- GitHub Sync -->
+            <LinearLayout
+                android:id="@+id/githubSyncItem"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_system"
+                    android:contentDescription="Sync"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/celestia_github"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="Sync settings with GitHub"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Check for Updates -->
+            <LinearLayout
+                android:id="@+id/checkUpdatesItem"
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_info"
+                    android:contentDescription="Update"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/celestia_updates"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="Check for Celestia OS updates"/>
+                </LinearLayout>
+                <ImageView style="@style/Chevron"
+                    android:src="@drawable/ic_chevron"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

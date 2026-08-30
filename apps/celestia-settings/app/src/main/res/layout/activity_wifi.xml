@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!-- Header -->
+    <LinearLayout
+        style="@style/SettingsHeader"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btnBack"
+            style="@style/BackButton"
+            android:src="@drawable/ic_chevron"
+            android:rotation="180"
+            android:contentDescription="Back"/>
+        <TextView style="@style/HeaderTitle"
+            android:text="@string/wifi_title"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- WiFi Toggle -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/wifi_toggle"/>
+                    <TextView
+                        android:id="@+id/wifiStatusText"
+                        style="@style/ItemSubtitle"
+                        android:text="@string/on"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/wifiSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- WiFi off message -->
+            <TextView
+                android:id="@+id/wifiOffMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/wifi_off_message"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:padding="32dp"
+                android:visibility="gone"/>
+
+            <!-- Available Networks Section -->
+            <TextView
+                android:id="@+id/availableNetworksHeader"
+                style="@style/SectionHeader"
+                android:text="@string/wifi_available"/>
+
+            <!-- Connected Network -->
+            <LinearLayout
+                android:id="@+id/connectedNetwork"
+                style="@style/SettingsItem"
+                android:orientation="horizontal"
+                android:visibility="visible">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_wifi"
+                    android:contentDescription="WiFi"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="HomeWifi"/>
+                    <TextView
+                        android:id="@+id/connectedStatus"
+                        style="@style/ItemSubtitle"
+                        android:text="@string/wifi_connected"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✓"
+                    android:textColor="@color/safe_green"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Available Network List -->
+            <LinearLayout
+                android:id="@+id/networkList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Office-5G -->
+                <LinearLayout
+                    android:id="@+id/network_office"
+                    style="@style/SettingsItem"
+                    android:orientation="horizontal">
+                    <ImageView
+                        style="@style/ItemIcon"
+                        android:src="@drawable/ic_wifi"
+                        android:contentDescription="WiFi"/>
+                    <LinearLayout
+                        style="@style/ItemTitleVertical"
+                        android:orientation="vertical">
+                        <TextView style="@style/ItemTitle"
+                            android:text="Office-5G"/>
+                        <TextView style="@style/ItemSubtitle"
+                            android:text="5 GHz · WPA3-Personal"/>
+                    </LinearLayout>
+                    <ImageView style="@style/Chevron"
+                        android:src="@drawable/ic_chevron"/>
+                </LinearLayout>
+
+                <View style="@style/DividerStyle"/>
+
+                <!-- Celestia-Net -->
+                <LinearLayout
+                    android:id="@+id/network_celestia"
+                    style="@style/SettingsItem"
+                    android:orientation="horizontal">
+                    <ImageView
+                        style="@style/ItemIcon"
+                        android:src="@drawable/ic_wifi"
+                        android:contentDescription="WiFi"/>
+                    <LinearLayout
+                        style="@style/ItemTitleVertical"
+                        android:orientation="vertical">
+                        <TextView style="@style/ItemTitle"
+                            android:text="Celestia-Net"/>
+                        <TextView style="@style/ItemSubtitle"
+                            android:text="2.4 GHz · WPA2-Personal"/>
+                    </LinearLayout>
+                    <ImageView style="@style/Chevron"
+                        android:src="@drawable/ic_chevron"/>
+                </LinearLayout>
+
+                <View style="@style/DividerStyle"/>
+
+                <!-- Neighbor_WiFi -->
+                <LinearLayout
+                    android:id="@+id/network_neighbor"
+                    style="@style/SettingsItem"
+                    android:orientation="horizontal">
+                    <ImageView
+                        style="@style/ItemIcon"
+                        android:src="@drawable/ic_wifi"
+                        android:contentDescription="WiFi"/>
+                    <LinearLayout
+                        style="@style/ItemTitleVertical"
+                        android:orientation="vertical">
+                        <TextView style="@style/ItemTitle"
+                            android:text="Neighbor_WiFi"/>
+                        <TextView style="@style/ItemSubtitle"
+                            android:text="2.4 GHz · WPA2-Personal"/>
+                    </LinearLayout>
+                    <ImageView style="@style/Chevron"
+                        android:src="@drawable/ic_chevron"/>
+                </LinearLayout>
+
+                <View style="@style/DividerStyle"/>
+
+                <!-- Cafe_Free -->
+                <LinearLayout
+                    android:id="@+id/network_cafe"
+                    style="@style/SettingsItem"
+                    android:orientation="horizontal">
+                    <ImageView
+                        style="@style/ItemIcon"
+                        android:src="@drawable/ic_wifi"
+                        android:contentDescription="WiFi"/>
+                    <LinearLayout
+                        style="@style/ItemTitleVertical"
+                        android:orientation="vertical">
+                        <TextView style="@style/ItemTitle"
+                            android:text="Cafe_Free"/>
+                        <TextView style="@style/ItemSubtitle"
+                            android:text="2.4 GHz · Open"/>
+                    </LinearLayout>
+                    <ImageView style="@style/Chevron"
+                        android:src="@drawable/ic_chevron"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

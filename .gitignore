@@ -1,0 +1,30 @@
+# Build outputs
+build/
+app/build/
+*.apk
+*.ap_
+*.dex
+
+# Gradle
+.gradle/
+local.properties
+gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Emulator build artifacts
+emulator/celestia-emulator/app/build/
+emulator/celestia-emulator/build/
+emulator/celestia-emulator/.gradle/
+emulator/celestia-emulator/local.properties
+emulator/celestia-emulator/gradle/wrapper/gradle-wrapper.jar
+
+# Other projects
+../

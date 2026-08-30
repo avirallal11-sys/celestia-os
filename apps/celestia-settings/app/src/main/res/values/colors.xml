@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#0A0A1A</color>
+    <color name="surface">#1A1A3E</color>
+    <color name="surface_light">#252550</color>
+    <color name="accent">#00D4FF</color>
+    <color name="accent_dark">#0099BB</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#AAAAAA</color>
+    <color name="text_hint">#666666</color>
+    <color name="divider">#2A2A4A</color>
+    <color name="switch_track_on">#00D4FF</color>
+    <color name="switch_track_off">#444444</color>
+    <color name="switch_thumb_on">#FFFFFF</color>
+    <color name="switch_thumb_off">#CCCCCC</color>
+    <color name="battery_green">#4CAF50</color>
+    <color name="battery_yellow">#FFC107</color>
+    <color name="battery_red">#F44336</color>
+    <color name="storage_bar_used">#00D4FF</color>
+    <color name="storage_bar_bg">#1A1A3E</color>
+    <color name="search_bg">#1A1A3E</color>
+    <color name="ripple_color">#2000D4FF</color>
+    <color name="dialog_bg">#1E1E3F</color>
+    <color name="safe_green">#4CAF50</color>
+    <color name="warning_orange">#FF9800</color>
+    <color name="error_red">#F44336</color>
+    <color name="neon_purple">#BB86FC</color>
+    <color name="starlight_white">#F5F5F5</color>
+    <color name="midnight_blue">#1A237E</color>
+    <color name="color_d">#FF5252</color>
+    <color name="color_r">#FF4081</color>
+    <color name="color_g">#69F0AE</color>
+    <color name="color_c">#40C4FF</color>
+    <color name="color_y">#FFFFD740</color>
+    <color name="color_b">#448AFF</color>
+</resources>

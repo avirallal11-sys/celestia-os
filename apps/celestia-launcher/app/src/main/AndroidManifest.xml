@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.celestia.launcher">
+
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_home"
+        android:label="@string/app_name"
+        android:theme="@style/CelestiaLauncherTheme"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".LauncherActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:screenOrientation="nosensor"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".AppDrawerActivity"
+            android:exported="false"
+            android:theme="@style/CelestiaLauncherTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+    </application>
+</manifest>

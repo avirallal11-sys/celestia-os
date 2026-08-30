@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/SettingsHeader"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btnBack"
+            style="@style/BackButton"
+            android:src="@drawable/ic_chevron"
+            android:rotation="180"
+            android:contentDescription="Back"/>
+        <TextView style="@style/HeaderTitle"
+            android:text="@string/location_title"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- Location Toggle -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/location_toggle"/>
+                    <TextView
+                        android:id="@+id/locationStatusText"
+                        style="@style/ItemSubtitle"
+                        android:text="@string/on"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/locationSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Recent Location Requests -->
+            <TextView
+                style="@style/SectionHeader"
+                android:text="@string/location_recent"/>
+
+            <LinearLayout
+                style="@style/SettingsItemCompact"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_location"
+                    android:contentDescription="Maps"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="Google Maps"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="2 min ago"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <LinearLayout
+                style="@style/SettingsItemCompact"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_location"
+                    android:contentDescription="Weather"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="Weather App"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="15 min ago"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- App Location Permissions -->
+            <TextView
+                style="@style/SectionHeader"
+                android:text="@string/location_app_permissions"/>
+
+            <LinearLayout
+                style="@style/SettingsItemCompact"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_location"
+                    android:contentDescription="App"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="Maps"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="Always"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <LinearLayout
+                style="@style/SettingsItemCompact"
+                android:orientation="horizontal">
+                <ImageView
+                    style="@style/ItemIcon"
+                    android:src="@drawable/ic_location"
+                    android:contentDescription="App"/>
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="Weather"/>
+                    <TextView style="@style/ItemSubtitle"
+                        android:text="While using"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Location Services -->
+            <TextView
+                style="@style/SectionHeader"
+                android:text="@string/location_services"/>
+
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/location_gps"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/gpsSwitch"
+                    style="@style/SwitchStyle"
+                    android:checked="true"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/location_wifi_scan"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/wifiScanSwitch"
+                    style="@style/SwitchStyle"
+                    android:checked="true"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/location_bt_scan"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/btScanSwitch"
+                    style="@style/SwitchStyle"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+            <View style="@style/DividerStyle"/>
+
+            <!-- Google Location Accuracy -->
+            <LinearLayout
+                style="@style/SettingsItem"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/ItemTitleVertical"
+                    android:orientation="vertical">
+                    <TextView style="@style/ItemTitle"
+                        android:text="@string/location_accuracy"/>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/locationAccuracySwitch"
+                    style="@style/SwitchStyle"
+                    android:checked="true"
+                    android:thumbTint="@color/accent"
+                    android:trackTint="@color/switch_track_off"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

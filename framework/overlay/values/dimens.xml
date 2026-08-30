@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Celestia Dimens - System-wide spacing and sizing -->
+<resources>
+    <!-- Status Bar -->
+    <dimen name="status_bar_height">28dp</dimen>
+
+    <!-- Navigation Bar -->
+    <dimen name="navigation_bar_height">48dp</dimen>
+
+    <!-- Quick Settings -->
+    <dimen name="qs_tile_icon_size">32dp</dimen>
+    <dimen name="qs_tile_text_size">12sp</dimen>
+    <dimen name="qs_panel_padding">16dp</dimen>
+
+    <!-- Notifications -->
+    <dimen name="notification_min_height">80dp</dimen>
+    <dimen name="notification_max_height">256dp</dimen>
+    <dimen name="notification_padding">12dp</dimen>
+
+    <!-- Dialogs -->
+    <dimen name="dialog_min_width">280dp</dimen>
+    <dimen name="dialog_padding">24dp</dimen>
+
+    <!-- App Icons -->
+    <dimen name="app_icon_size">48dp</dimen>
+    <dimen name="app_icon_size_large">64dp</dimen>
+
+    <!-- Launcher -->
+    <dimen name="launcher_grid_columns">4</dimen>
+    <dimen name="launcher_grid_rows">5</dimen>
+    <dimen name="launcher_dock_height">80dp</dimen>
+    <dimen name="launcher_item_padding">8dp</dimen>
+</resources>

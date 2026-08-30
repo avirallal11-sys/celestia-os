@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_xlarge">32dp</dimen>
+    <dimen name="item_height">72dp</dimen>
+    <dimen name="item_height_small">56dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="icon_size_large">32dp</dimen>
+    <dimen name="title_size">16sp</dimen>
+    <dimen name="subtitle_size">13sp</dimen>
+    <dimen name="header_size">20sp</dimen>
+    <dimen name="search_height">48dp</dimen>
+    <dimen name="chevron_size">20dp</dimen>
+    <dimen name="switch_width">52dp</dimen>
+    <dimen name="switch_height">28dp</dimen>
+    <dimen name="slider_height">4dp</dimen>
+    <dimen name="corner_radius">12dp</dimen>
+    <dimen name="corner_radius_small">8dp</dimen>
+    <dimen name="battery_bar_height">200dp</dimen>
+    <dimen name="storage_bar_height">24dp</dimen>
+</resources>
